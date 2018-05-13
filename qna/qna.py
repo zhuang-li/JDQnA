@@ -1,15 +1,16 @@
 __author__ = 'zhuangli'
+
+import sys
+sys.path.insert(0,'../tfidf')
+sys.path.insert(0,'../cnn_text_classification')
 import tensorflow as tf
 import numpy as np
 import os
-from tfidf import tfidf
+import tfidf
 import jieba
-import time
-import datetime
-from cnn_text_classification import data_helpers
-from cnn_text_classification import text_cnn
+import data_helpers
+
 from tensorflow.contrib import learn
-import csv
 import json
 import sys
 
@@ -76,7 +77,6 @@ def bonus_score_given(label_json_path, train_json_path, bonus_score, winner_id, 
     for name, id in label_json.items():
         if id == winner_id:
             winner_name = name
-    print (winner_name)
     idx = 0
 
     for item in train_list:
@@ -94,7 +94,7 @@ train_json_path = "../data/jd_train.json"
 
 title_point = "../cnn_text_classification/runs/1526220923/checkpoints/"
 title_id = cnn_evaluate(title_point)
-print (title_id)
+#print (title_id)
 list_item_point = "../cnn_text_classification/runs/1526224685/checkpoints/"
 list_item_id = cnn_evaluate(list_item_point)
 #print (list_item_id)

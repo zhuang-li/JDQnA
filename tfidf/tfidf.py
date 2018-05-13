@@ -1,6 +1,4 @@
 __author__ = 'zhuangli'
-#! /usr/bin/env python3
-from cnn_text_classification import data_helpers
 from gensim import corpora, models, similarities
 from collections import defaultdict
 

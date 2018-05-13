@@ -13,7 +13,7 @@ import csv
 import json
 import sys
 
-tf.flags.DEFINE_string("query", "发错货物", "query for the JD QnA task")
+tf.flags.DEFINE_string("query", "什么是满返满赠？", "query for the JD QnA task")
 FLAGS = tf.flags.FLAGS
 FLAGS(sys.argv)
 def cnn_evaluate(check_point):
@@ -104,7 +104,7 @@ np_title_v = bonus_score_given(title_label_json,train_json_path, 0.15,title_id,"
 #print (np_title_v)
 
 np_list_item_v = bonus_score_given(list_item_label_json,train_json_path, 0.1,list_item_id,"list_item")
-print (np_list_item_v)
+#print (np_list_item_v)
 
 q_x_text, q_y, q_labels = data_helpers.load_data_and_labels(train_json_path, "question")
 

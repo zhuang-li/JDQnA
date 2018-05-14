@@ -29,4 +29,4 @@ For now, it seems the classification model is not much helpful as there are not 
 
 ## To do
 
-Try to calculate the query similarity with word embeeding or a siamese network instead of the tfidf and see if it can achieve a better performance.
+Try to calculate the query similarity with word embeding or a siamese network instead of the tfidf and see if it can achieve a better performance.

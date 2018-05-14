@@ -19,3 +19,14 @@ result
 您好   余额 返 卡 退款 周期 如下  
 
 ```
+## Proposed Method
+
+Now we just calculate the query similarity between the query and the QA pair. And the query which is in the same category with the question would have a higher score.
+
+## Observation
+
+For now, it seems the classification model is not much helpful as there are not enough training data (we only have 783 QA pair). But the simple tfidf method works way much better. I think it is because on the small-scale data, the hand-crafted features include more expert knowledge so work better.
+
+## To do
+
+Try to calculate the query similarity with word embeeding or a siamese network instead of the tfidf and see if it can achieve a better performance.
